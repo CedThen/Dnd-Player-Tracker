@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.352
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DnD Player Tracker", "Dnd Player Tracker\DnD Player Tracker.csproj", "{7A6C859D-D4F7-40B9-89BC-375EC143D48D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dnd Player Library", "Dnd Player Library\Dnd Player Library.csproj", "{CDBA001E-2E9D-4385-B1A3-CD1BEE8A672D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A6C859D-D4F7-40B9-89BC-375EC143D48D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A6C859D-D4F7-40B9-89BC-375EC143D48D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A6C859D-D4F7-40B9-89BC-375EC143D48D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A6C859D-D4F7-40B9-89BC-375EC143D48D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDBA001E-2E9D-4385-B1A3-CD1BEE8A672D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDBA001E-2E9D-4385-B1A3-CD1BEE8A672D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDBA001E-2E9D-4385-B1A3-CD1BEE8A672D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDBA001E-2E9D-4385-B1A3-CD1BEE8A672D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F682F09A-3FEE-4B68-A4A3-5B355570E03F}
+	EndGlobalSection
+EndGlobal
