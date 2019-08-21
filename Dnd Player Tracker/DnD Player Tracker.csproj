@@ -94,5 +94,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dnd Player Library\Dnd Player Library.csproj">
+      <Project>{cdba001e-2e9d-4385-b1a3-cd1bee8a672d}</Project>
+      <Name>Dnd Player Library</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

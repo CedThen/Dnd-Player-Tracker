@@ -11,7 +11,7 @@ namespace Dnd_Player_Library
         public string PlayerClass { get; set; }
         public Stats PlayerStats { get; set; }
         public Inventory PlayerInventory { get; set; }
-        public SpellLibrary PlayerSpellLibrary { get; set; }
+        public List<Spells> PlayerSpellLibrary { get; set; } = new List<Spells>();
 
 
     }
