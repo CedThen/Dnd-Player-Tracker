@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Dnd_Player_Tracker.Properties
+namespace Dnd_Player_Tracker_UI.Properties
 {
 
 
