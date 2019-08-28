@@ -16,10 +16,10 @@ namespace DnDPlayerTrackerUI
         {
             InitializeComponent();
             NewCharacterButton.MouseEnter += OnMouseEnterNewCharacterButton;
-            NewCharacterButton.MouseLeave += OnMouseLeaveNewCharacterButton;
-            
+            NewCharacterButton.MouseLeave += OnMouseLeaveNewCharacterButton;            
         }
 
+        
         private void OnMouseEnterNewCharacterButton(object sender, EventArgs e)
         {
             NewCharacterButton.BackColor = Color.Aqua; // or Color.Red or whatever you want
@@ -27,6 +27,12 @@ namespace DnDPlayerTrackerUI
         private void OnMouseLeaveNewCharacterButton(object sender, EventArgs e)
         {
             NewCharacterButton.BackColor = Color.Beige;
+        }
+
+        private void NewCharacterButton_Click(object sender, EventArgs e)
+        {
+            Form C = new CharacterCreationForm();
+            C.Show();
         }
     }
 }

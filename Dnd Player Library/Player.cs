@@ -11,9 +11,9 @@ namespace Dnd_Player_Library
         public string PlayerRace { get; set; }
         public string PlayerClass { get; set; }
         public Stats PlayerStats { get; set; }
-        public List<Equipment> PlayerEquipment { get; set; }
-        public Purse PlayerPurse { get; set; }
-        public List<Spells> PlayerSpellLibrary { get; set; } = new List<Spells>();
+        //public List<Equipment> PlayerEquipment { get; set; }
+        //public Purse PlayerPurse { get; set; }
+        //public List<Spells> PlayerSpellLibrary { get; set; } = new List<Spells>();
 
 
     }

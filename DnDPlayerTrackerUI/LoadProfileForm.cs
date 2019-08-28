@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace DnDPlayerTrackerUI
 {
-    public partial class CharacterCreationForm : Form
+    public partial class LoadProfileForm : Form
     {
-        public CharacterCreationForm()
+        public LoadProfileForm()
         {
             InitializeComponent();
-        }
-
-        private void CharacterLevelTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ArmorClassLabel_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -52,6 +52,12 @@
     <Compile Include="CharacterCreationForm.Designer.cs">
       <DependentUpon>CharacterCreationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoadProfileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadProfileForm.Designer.cs">
+      <DependentUpon>LoadProfileForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PlayerTrackerUIForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CharacterCreationForm.resx">
       <DependentUpon>CharacterCreationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadProfileForm.resx">
+      <DependentUpon>LoadProfileForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PlayerTrackerUIForm.resx">
       <DependentUpon>PlayerTrackerUIForm.cs</DependentUpon>
@@ -74,6 +83,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -87,6 +97,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dragon icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

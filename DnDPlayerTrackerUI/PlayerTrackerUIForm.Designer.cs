@@ -42,7 +42,7 @@
             this.MainProgramLabel.AutoSize = true;
             this.MainProgramLabel.Font = new System.Drawing.Font("Immortal", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainProgramLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.MainProgramLabel.Location = new System.Drawing.Point(114, 39);
+            this.MainProgramLabel.Location = new System.Drawing.Point(108, 91);
             this.MainProgramLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MainProgramLabel.Name = "MainProgramLabel";
             this.MainProgramLabel.Size = new System.Drawing.Size(682, 80);
@@ -55,7 +55,7 @@
             this.MainMenuLabel.AutoSize = true;
             this.MainMenuLabel.Font = new System.Drawing.Font("Immortal", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.MainMenuLabel.Location = new System.Drawing.Point(338, 142);
+            this.MainMenuLabel.Location = new System.Drawing.Point(332, 194);
             this.MainMenuLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MainMenuLabel.Name = "MainMenuLabel";
             this.MainMenuLabel.Size = new System.Drawing.Size(234, 46);
@@ -66,19 +66,20 @@
             // 
             this.NewCharacterButton.BackColor = System.Drawing.Color.Silver;
             this.NewCharacterButton.Font = new System.Drawing.Font("Immortal", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewCharacterButton.Location = new System.Drawing.Point(342, 229);
+            this.NewCharacterButton.Location = new System.Drawing.Point(336, 281);
             this.NewCharacterButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.NewCharacterButton.Name = "NewCharacterButton";
             this.NewCharacterButton.Size = new System.Drawing.Size(226, 45);
             this.NewCharacterButton.TabIndex = 2;
             this.NewCharacterButton.Text = "New Character";
             this.NewCharacterButton.UseVisualStyleBackColor = false;
+            this.NewCharacterButton.Click += new System.EventHandler(this.NewCharacterButton_Click);
             // 
             // LoadProfileButton
             // 
             this.LoadProfileButton.BackColor = System.Drawing.Color.Silver;
             this.LoadProfileButton.Font = new System.Drawing.Font("Immortal", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoadProfileButton.Location = new System.Drawing.Point(342, 300);
+            this.LoadProfileButton.Location = new System.Drawing.Point(336, 352);
             this.LoadProfileButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.LoadProfileButton.Name = "LoadProfileButton";
             this.LoadProfileButton.Size = new System.Drawing.Size(226, 45);
@@ -90,7 +91,7 @@
             // 
             this.DeleteProfileButton.BackColor = System.Drawing.Color.Silver;
             this.DeleteProfileButton.Font = new System.Drawing.Font("Immortal", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteProfileButton.Location = new System.Drawing.Point(342, 371);
+            this.DeleteProfileButton.Location = new System.Drawing.Point(336, 423);
             this.DeleteProfileButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.DeleteProfileButton.Name = "DeleteProfileButton";
             this.DeleteProfileButton.Size = new System.Drawing.Size(226, 45);
