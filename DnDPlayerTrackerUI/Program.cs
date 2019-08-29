@@ -16,7 +16,11 @@ namespace DnDPlayerTrackerUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            //Dnd_Player_Library.GlobalConfig.InitializeConnections
+
             Application.Run(new PlayerTrackerUIForm());
+            
         }
     }
 }

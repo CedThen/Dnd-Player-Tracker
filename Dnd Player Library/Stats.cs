@@ -4,8 +4,10 @@ using System.Text;
 
 namespace Dnd_Player_Library
 {
-    class Stats
+    public class Stats
     {
+        
+
         public int StatsID { get; set; }
         public int Level { get; set; }
         public int TotalHP { get; set; }
@@ -22,5 +24,21 @@ namespace Dnd_Player_Library
         //public int DeathSaveSuccess { get; set; }
         //public int DeathSaveFailure { get; set; }
 
+        public Stats(int level, int totalHP, int currentHP, 
+            int proficiencyBonus, string hitDice, int str, int dex, 
+            int con, int @int, int wis, int cha)
+        {
+            Level = level;
+            TotalHP = totalHP;
+            CurrentHP = currentHP;
+            ProficiencyBonus = proficiencyBonus;
+            HitDice = hitDice;
+            Str = str;
+            Dex = dex;
+            Con = con;
+            Int = @int;
+            Wis = wis;
+            Cha = cha;
+        }
     }
 }
