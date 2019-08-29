@@ -51,16 +51,15 @@ namespace DnDPlayerTrackerUI
                 Convert.ToInt32(WisTextBox.Text), Convert.ToInt32(CharTexBox.Text));
             Player p = new Player(CharacterNameTextBox.Text, RaceTextBox.Text, ClassTextBox.Text, s);
 
-
-
+            GlobalConfig.Connection.CreateProfile(p);
 
 
             //Dnd_Player_Library.SqlConnector.CreateProfile(p, s);
             //SqlDataAdapter sqlDataAdaper
-
+            ClearTextBoxes();
             MessageBox.Show("Profile has been created");
 
-            ClearTextBoxes();
+            
 
         }
 
@@ -69,7 +68,7 @@ namespace DnDPlayerTrackerUI
             foreach(Control c in this.Controls)
             {
                 if (c is TextBox)
-                    c.Text = "";
+                    c.Text = "a";
                 else
                     return;
             }
