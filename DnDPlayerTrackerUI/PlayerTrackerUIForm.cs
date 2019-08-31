@@ -34,5 +34,11 @@ namespace DnDPlayerTrackerUI
             Form C = new CharacterCreationForm();
             C.Show();
         }
+
+        private void LoadProfileButton_Click(object sender, EventArgs e)
+        {
+            Form D = new LoadProfileForm();
+            D.Show();
+        }
     }
 }

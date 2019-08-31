@@ -86,6 +86,7 @@
             this.LoadProfileButton.TabIndex = 3;
             this.LoadProfileButton.Text = "Load Profile";
             this.LoadProfileButton.UseVisualStyleBackColor = false;
+            this.LoadProfileButton.Click += new System.EventHandler(this.LoadProfileButton_Click);
             // 
             // DeleteProfileButton
             // 

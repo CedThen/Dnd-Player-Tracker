@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Dapper;
 using System.Data;
+using System.Linq;
 
 namespace Dnd_Player_Library
 {
@@ -39,6 +40,16 @@ namespace Dnd_Player_Library
             }//connection is closed at this point, and will prevent memory leaks
         }
 
-
+        public List<Player> GetPlayers_All()
+        {
+            List<Player> output;
+            using (IDbConnection Connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.CnnString("DnDPlayerTracker")))
+            {
+                output = Connection.Query<Player>("dbo.GetPlayer").ToList();
+            }
+            return output;
+        }
     }
+
+    
 }

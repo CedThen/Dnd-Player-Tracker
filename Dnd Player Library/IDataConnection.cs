@@ -7,5 +7,7 @@ namespace Dnd_Player_Library
     public interface IDataConnection
     {
         Player CreateProfile(Player player);
+        List<Player> GetPlayers_All();
+        
     }
 }

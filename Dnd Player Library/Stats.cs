@@ -42,5 +42,10 @@ namespace Dnd_Player_Library
             Cha = cha;
             Initiative = initative;
         }
+
+        public Stats()
+        {
+
+        }
     }
 }

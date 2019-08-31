@@ -28,11 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoadProfileForm));
             this.LoadProfileLabel = new System.Windows.Forms.Label();
             this.SelectProfileComboBox = new System.Windows.Forms.ComboBox();
             this.LoadProfileButton = new System.Windows.Forms.Button();
             this.ReturnMainButton = new System.Windows.Forms.Button();
+            this.dnDPlayerTrackerDataSet = new DnDPlayerTrackerUI.DnDPlayerTrackerDataSet();
+            this.dnDPlayerTrackerDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.dnDPlayerTrackerDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dnDPlayerTrackerDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // LoadProfileLabel
@@ -55,6 +60,7 @@
             this.SelectProfileComboBox.Name = "SelectProfileComboBox";
             this.SelectProfileComboBox.Size = new System.Drawing.Size(392, 35);
             this.SelectProfileComboBox.TabIndex = 3;
+            this.SelectProfileComboBox.Click += new System.EventHandler(this.SelectProfileComboBox_Click);
             // 
             // LoadProfileButton
             // 
@@ -67,6 +73,7 @@
             this.LoadProfileButton.TabIndex = 4;
             this.LoadProfileButton.Text = "Load Profile";
             this.LoadProfileButton.UseVisualStyleBackColor = false;
+            this.LoadProfileButton.Click += new System.EventHandler(this.LoadProfileButton_Click);
             // 
             // ReturnMainButton
             // 
@@ -79,6 +86,17 @@
             this.ReturnMainButton.TabIndex = 5;
             this.ReturnMainButton.Text = "Return To Main Menu";
             this.ReturnMainButton.UseVisualStyleBackColor = false;
+            this.ReturnMainButton.Click += new System.EventHandler(this.ReturnMainButton_Click);
+            // 
+            // dnDPlayerTrackerDataSet
+            // 
+            this.dnDPlayerTrackerDataSet.DataSetName = "DnDPlayerTrackerDataSet";
+            this.dnDPlayerTrackerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dnDPlayerTrackerDataSetBindingSource
+            // 
+            this.dnDPlayerTrackerDataSetBindingSource.DataSource = this.dnDPlayerTrackerDataSet;
+            this.dnDPlayerTrackerDataSetBindingSource.Position = 0;
             // 
             // LoadProfileForm
             // 
@@ -95,6 +113,8 @@
             this.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.Name = "LoadProfileForm";
             this.Text = "Load Profile";
+            ((System.ComponentModel.ISupportInitialize)(this.dnDPlayerTrackerDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dnDPlayerTrackerDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -106,5 +126,7 @@
         private System.Windows.Forms.ComboBox SelectProfileComboBox;
         private System.Windows.Forms.Button LoadProfileButton;
         private System.Windows.Forms.Button ReturnMainButton;
+        private DnDPlayerTrackerDataSet dnDPlayerTrackerDataSet;
+        private System.Windows.Forms.BindingSource dnDPlayerTrackerDataSetBindingSource;
     }
 }

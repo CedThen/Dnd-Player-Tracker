@@ -18,14 +18,14 @@ namespace Dnd_Player_Library
 
             if (db == DatabaseType.Sql)
             {
-                //TODO - set up the SQL connector properly
+                
                 SqlConnector sql = new SqlConnector();
                 Connection = sql;
             }
 
             else if (db == DatabaseType.TextFile)
             {
-                //TODO - Create the text connection 
+                
                 TextConnector txt = new TextConnector();
                 Connection = txt;
             }

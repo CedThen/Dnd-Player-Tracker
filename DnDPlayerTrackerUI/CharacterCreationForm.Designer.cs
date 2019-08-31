@@ -103,7 +103,7 @@
             this.CharacterNameTextBox.Text = "Character Name";
             this.CharacterNameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.CharacterNameTextBox.Click += new System.EventHandler(this.TextBox_MouseClick);
-            this.CharacterNameTextBox.Leave += new System.EventHandler(this.TextBox_TextChanged);
+            this.CharacterNameTextBox.Leave += new System.EventHandler(this.TextBox_LeaveFocus);
             // 
             // CharacterLevelTextBox
             // 
@@ -114,7 +114,7 @@
             this.CharacterLevelTextBox.TabIndex = 2;
             this.CharacterLevelTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.CharacterLevelTextBox.Click += new System.EventHandler(this.TextBox_MouseClick);
-            this.CharacterLevelTextBox.Leave += new System.EventHandler(this.TextBox_TextChanged);
+            this.CharacterLevelTextBox.Leave += new System.EventHandler(this.TextBox_LeaveFocus);
             // 
             // CharacterExpTextBox
             // 
@@ -125,8 +125,7 @@
             this.CharacterExpTextBox.TabIndex = 3;
             this.CharacterExpTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.CharacterExpTextBox.Click += new System.EventHandler(this.TextBox_MouseClick);
-            this.CharacterExpTextBox.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
-            this.CharacterExpTextBox.Leave += new System.EventHandler(this.TextBox_TextChanged);
+            this.CharacterExpTextBox.Leave += new System.EventHandler(this.TextBox_LeaveFocus);
             // 
             // StrGroupBox
             // 
@@ -140,6 +139,7 @@
             this.StrGroupBox.TabIndex = 9;
             this.StrGroupBox.TabStop = false;
             this.StrGroupBox.Text = "Strength";
+            this.StrGroupBox.Leave += new System.EventHandler(this.GroupBox_Leave);
             // 
             // StrModLabel
             // 
@@ -163,8 +163,7 @@
             this.StrTextBox.Text = "Str";
             this.StrTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.StrTextBox.Click += new System.EventHandler(this.TextBox_MouseClick);
-            this.StrTextBox.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
-            this.StrTextBox.Leave += new System.EventHandler(this.TextBox_TextChanged);
+            this.StrTextBox.Leave += new System.EventHandler(this.TextBox_LeaveFocus);
             // 
             // DexGroupBox
             // 
@@ -178,6 +177,7 @@
             this.DexGroupBox.TabIndex = 10;
             this.DexGroupBox.TabStop = false;
             this.DexGroupBox.Text = "Dexterity";
+            this.DexGroupBox.Leave += new System.EventHandler(this.GroupBox_Leave);
             // 
             // DexModLabel
             // 
@@ -200,8 +200,7 @@
             this.DexTextBox.Text = "Dex";
             this.DexTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.DexTextBox.Click += new System.EventHandler(this.TextBox_MouseClick);
-            this.DexTextBox.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
-            this.DexTextBox.Leave += new System.EventHandler(this.TextBox_TextChanged);
+            this.DexTextBox.Leave += new System.EventHandler(this.TextBox_LeaveFocus);
             // 
             // ConGroupBox
             // 
@@ -215,6 +214,7 @@
             this.ConGroupBox.TabIndex = 10;
             this.ConGroupBox.TabStop = false;
             this.ConGroupBox.Text = "Constitution";
+            this.ConGroupBox.Leave += new System.EventHandler(this.GroupBox_Leave);
             // 
             // ConModLabel
             // 
@@ -237,8 +237,7 @@
             this.ConTextBox.Text = "Con";
             this.ConTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.ConTextBox.Click += new System.EventHandler(this.TextBox_MouseClick);
-            this.ConTextBox.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
-            this.ConTextBox.Leave += new System.EventHandler(this.TextBox_TextChanged);
+            this.ConTextBox.Leave += new System.EventHandler(this.TextBox_LeaveFocus);
             // 
             // IntGroupBox
             // 
@@ -252,6 +251,7 @@
             this.IntGroupBox.TabIndex = 10;
             this.IntGroupBox.TabStop = false;
             this.IntGroupBox.Text = "Intelligence";
+            this.IntGroupBox.Leave += new System.EventHandler(this.GroupBox_Leave);
             // 
             // IntModLabel
             // 
@@ -274,8 +274,7 @@
             this.IntTextBox.Text = "Int";
             this.IntTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.IntTextBox.Click += new System.EventHandler(this.TextBox_MouseClick);
-            this.IntTextBox.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
-            this.IntTextBox.Leave += new System.EventHandler(this.TextBox_TextChanged);
+            this.IntTextBox.Leave += new System.EventHandler(this.TextBox_LeaveFocus);
             // 
             // WisGroupBox
             // 
@@ -289,6 +288,7 @@
             this.WisGroupBox.TabIndex = 11;
             this.WisGroupBox.TabStop = false;
             this.WisGroupBox.Text = "Wisdom";
+            this.WisGroupBox.Leave += new System.EventHandler(this.GroupBox_Leave);
             // 
             // WisModLabel
             // 
@@ -311,8 +311,7 @@
             this.WisTextBox.Text = "Wis";
             this.WisTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.WisTextBox.Click += new System.EventHandler(this.TextBox_MouseClick);
-            this.WisTextBox.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
-            this.WisTextBox.Leave += new System.EventHandler(this.TextBox_TextChanged);
+            this.WisTextBox.Leave += new System.EventHandler(this.TextBox_LeaveFocus);
             // 
             // ChaGroupBox
             // 
@@ -326,6 +325,7 @@
             this.ChaGroupBox.TabIndex = 10;
             this.ChaGroupBox.TabStop = false;
             this.ChaGroupBox.Text = "Charisma";
+            this.ChaGroupBox.Leave += new System.EventHandler(this.GroupBox_Leave);
             // 
             // ChaModLabel
             // 
@@ -348,8 +348,7 @@
             this.CharTexBox.Text = "Cha";
             this.CharTexBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.CharTexBox.Click += new System.EventHandler(this.TextBox_MouseClick);
-            this.CharTexBox.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
-            this.CharTexBox.Leave += new System.EventHandler(this.TextBox_TextChanged);
+            this.CharTexBox.Leave += new System.EventHandler(this.TextBox_LeaveFocus);
             // 
             // CurrentHPTextBox
             // 
@@ -361,7 +360,7 @@
             this.CurrentHPTextBox.TabIndex = 13;
             this.CurrentHPTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.CurrentHPTextBox.Click += new System.EventHandler(this.TextBox_MouseClick);
-            this.CurrentHPTextBox.Leave += new System.EventHandler(this.TextBox_TextChanged);
+            this.CurrentHPTextBox.Leave += new System.EventHandler(this.TextBox_LeaveFocus);
             // 
             // TotalHpTextBox
             // 
@@ -373,7 +372,7 @@
             this.TotalHpTextBox.TabIndex = 12;
             this.TotalHpTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TotalHpTextBox.Click += new System.EventHandler(this.TextBox_MouseClick);
-            this.TotalHpTextBox.Leave += new System.EventHandler(this.TextBox_TextChanged);
+            this.TotalHpTextBox.Leave += new System.EventHandler(this.TextBox_LeaveFocus);
             // 
             // LevelLabel
             // 
@@ -445,8 +444,7 @@
             this.ClassTextBox.TabIndex = 26;
             this.ClassTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.ClassTextBox.Click += new System.EventHandler(this.TextBox_MouseClick);
-            this.ClassTextBox.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
-            this.ClassTextBox.Leave += new System.EventHandler(this.TextBox_TextChanged);
+            this.ClassTextBox.Leave += new System.EventHandler(this.TextBox_LeaveFocus);
             // 
             // RaceTextBox
             // 
@@ -458,8 +456,7 @@
             this.RaceTextBox.TabIndex = 25;
             this.RaceTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.RaceTextBox.Click += new System.EventHandler(this.TextBox_MouseClick);
-            this.RaceTextBox.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
-            this.RaceTextBox.Leave += new System.EventHandler(this.TextBox_TextChanged);
+            this.RaceTextBox.Leave += new System.EventHandler(this.TextBox_LeaveFocus);
             // 
             // InitiativeLabel
             // 
@@ -489,10 +486,10 @@
             this.InitiativeTextBox.Name = "InitiativeTextBox";
             this.InitiativeTextBox.Size = new System.Drawing.Size(142, 34);
             this.InitiativeTextBox.TabIndex = 30;
+            this.InitiativeTextBox.Text = "+2";
             this.InitiativeTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.InitiativeTextBox.Click += new System.EventHandler(this.TextBox_MouseClick);
-            this.InitiativeTextBox.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
-            this.InitiativeTextBox.Leave += new System.EventHandler(this.TextBox_TextChanged);
+            this.InitiativeTextBox.Leave += new System.EventHandler(this.TextBox_LeaveFocus);
             // 
             // SpeedTextBox
             // 
@@ -504,8 +501,7 @@
             this.SpeedTextBox.TabIndex = 29;
             this.SpeedTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.SpeedTextBox.Click += new System.EventHandler(this.TextBox_MouseClick);
-            this.SpeedTextBox.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
-            this.SpeedTextBox.Leave += new System.EventHandler(this.TextBox_TextChanged);
+            this.SpeedTextBox.Leave += new System.EventHandler(this.TextBox_LeaveFocus);
             // 
             // ArmorClassLabel
             // 
@@ -527,8 +523,7 @@
             this.ArmorClassTextBox.TabIndex = 32;
             this.ArmorClassTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.ArmorClassTextBox.Click += new System.EventHandler(this.TextBox_MouseClick);
-            this.ArmorClassTextBox.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
-            this.ArmorClassTextBox.Leave += new System.EventHandler(this.TextBox_TextChanged);
+            this.ArmorClassTextBox.Leave += new System.EventHandler(this.TextBox_LeaveFocus);
             // 
             // SavingThrowsGroupBox
             // 
@@ -632,7 +627,7 @@
             this.HitDiceTextBox.TabIndex = 35;
             this.HitDiceTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.HitDiceTextBox.Click += new System.EventHandler(this.TextBox_MouseClick);
-            this.HitDiceTextBox.Leave += new System.EventHandler(this.TextBox_TextChanged);
+            this.HitDiceTextBox.Leave += new System.EventHandler(this.TextBox_LeaveFocus);
             // 
             // HitDiceLabel
             // 
@@ -678,8 +673,7 @@
             this.ProficiencyTextBox.Text = "2";
             this.ProficiencyTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.ProficiencyTextBox.Click += new System.EventHandler(this.TextBox_MouseClick);
-            this.ProficiencyTextBox.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
-            this.ProficiencyTextBox.Leave += new System.EventHandler(this.TextBox_TextChanged);
+            this.ProficiencyTextBox.Leave += new System.EventHandler(this.TextBox_LeaveFocus);
             // 
             // CreateProfileButton
             // 
