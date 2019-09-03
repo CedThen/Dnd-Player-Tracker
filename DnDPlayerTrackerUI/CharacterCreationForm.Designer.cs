@@ -622,8 +622,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.Name = "CharacterCreationForm";
-            this.Text = "New Profile";
-            this.Load += new System.EventHandler(this.CharacterCreationForm_Load);
+            this.Text = "New Profile";            
             this.StrGroupBox.ResumeLayout(false);
             this.StrGroupBox.PerformLayout();
             this.DexGroupBox.ResumeLayout(false);

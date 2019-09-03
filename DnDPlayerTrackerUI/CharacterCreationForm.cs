@@ -155,58 +155,26 @@ namespace DnDPlayerTrackerUI
                 Convert.ToInt32(CurrentHPTextBox.Text), Convert.ToInt32(ProficiencyTextBox.Text), HitDiceTextBox.Text,
                 Convert.ToInt32(StrTextBox.Text), Convert.ToInt32(DexTextBox.Text), Convert.ToInt32(ConTextBox.Text), Convert.ToInt32(IntTextBox.Text),
                 Convert.ToInt32(WisTextBox.Text), Convert.ToInt32(ChaTextBox.Text), InitiativeTextBox.Text, Convert.ToInt32(CharacterExpTextBox.Text),
-                Convert.ToInt32(SpeedTextBox), Convert.ToInt32(ArmorClassTextBox));
+                Convert.ToInt32(SpeedTextBox.Text), Convert.ToInt32(ArmorClassTextBox.Text));
             Player p = new Player(CharacterNameTextBox.Text, RaceTextBox.Text, ClassTextBox.Text, s);
 
             GlobalConfig.Connection.CreateProfile(p);
 
-            
-            ClearTextBoxes();
             MessageBox.Show("Profile has been created");          
         }
 
-        private void ClearTextBoxes()
+        public void GroupBox_Leave(object sender, EventArgs e)
         {
-            foreach(Control c in this.Controls)
-            {
-                if (c is TextBox)
-                    c.Text = "a";
-                else
-                    return;
-            }
-        }
-
-        private void CharacterCreationForm_Load(object sender, EventArgs e)
-        {
-            foreach (Control c in this.Controls)
-            {
-                if (c is Button)
-                {
-                    ChangeCursor((Button)c);
-                }
-            }
-        }
-
-        private void ChangeCursor(System.Windows.Forms.Button Btn)
-        {
-            Btn.Cursor = Cursors.Default;
-        }
-
-        private void GroupBox_Leave(object sender, EventArgs e)
-        {
-            TextBox currentTextBox = new TextBox();
+            TextBox currentTextBox;
             Label currentLabel = DetermineLabel((GroupBox)sender, out currentTextBox);
             int textNum = ValidateInt(currentTextBox.Text);
             if (textNum > 0)
             {                
-                currentLabel.Text = MatchMod(textNum);
-            }
-            else
-                return;
-            
+                currentLabel.Text = Dictionaries.StatDictionary(textNum);
+            }     
         }
 
-        private Label DetermineLabel(GroupBox currentBox, out TextBox tb)
+        public Label DetermineLabel(GroupBox currentBox, out TextBox tb)
         {
             switch(currentBox.Text)
             {
@@ -235,45 +203,7 @@ namespace DnDPlayerTrackerUI
             return null;
         }
 
-        private string MatchMod(int num)
-        {
-            Dictionary<int, string> StatMods = new Dictionary<int, string>()
-            {
-                { 1, "-5" },
-                { 2, "-4"},
-                { 3, "-4"},
-                { 4, "-3"},
-                { 5, "-3"},
-                { 6, "-2"},
-                { 7, "-2"},
-                { 8, "-1"},
-                { 9, "-1"},
-                { 10, "0"},
-                { 11, "0"},
-                { 12, "+1"},
-                { 13, "+1"},
-                { 14, "+2"},
-                { 15, "+2"},
-                { 16, "+3"},
-                { 17, "+3"},
-                { 18, "+4"},
-                { 19, "+4"},
-                { 20, "+5"},
-                { 21, "+5"},
-                { 22, "+6"},
-                { 23, "+6"},
-                { 24, "+7"},
-                { 25, "+7"},
-                { 26, "+8"},
-                { 27, "+8"},
-                { 28, "+9"},
-                { 29, "+9"},
-                { 30, "+10"},
-            };
-            return StatMods[num];
-        }
-
-        private int ValidateInt(string text)
+        public int ValidateInt(string text)
         {
             int num = 0;
             if (Int32.TryParse(text, out num))
@@ -282,7 +212,7 @@ namespace DnDPlayerTrackerUI
                     return num;
                 else
                 {
-                    MessageBox.Show("Please enter number between 0 and 30");
+                    MessageBox.Show("Please enter a number between 1 and 30");
                     return -1;
                 }      
             }

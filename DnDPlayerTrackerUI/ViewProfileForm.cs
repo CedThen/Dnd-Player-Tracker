@@ -18,7 +18,13 @@ namespace DnDPlayerTrackerUI
         {
             InitializeComponent();
             player = p;
+            FillTextBoxes(p);
+            SetStatMods();
 
+        }
+
+        private void FillTextBoxes(Player p)
+        {
             Console.WriteLine(p.PlayerName);
             Console.WriteLine(p.PlayerStats.Level);
             Console.WriteLine(p.PlayerStats.CurrentHP);
@@ -42,10 +48,16 @@ namespace DnDPlayerTrackerUI
             ChaTextBox.Text = p.PlayerStats.Cha.ToString();
         }
 
-        private void ViewProfileForm_Load(object sender, EventArgs e)
+        private void SetStatMods()
         {
-            
+            StrModLabel.Text = Dictionaries.StatDictionary(player.PlayerStats.Str).ToString();
+            DexModLabel.Text = Dictionaries.StatDictionary(player.PlayerStats.Dex).ToString();
+            ConModLabel.Text = Dictionaries.StatDictionary(player.PlayerStats.Con).ToString();
+            IntModLabel.Text = Dictionaries.StatDictionary(player.PlayerStats.Int).ToString();
+            WisModLabel.Text = Dictionaries.StatDictionary(player.PlayerStats.Wis).ToString();
+            ChaModLabel.Text = Dictionaries.StatDictionary(player.PlayerStats.Cha).ToString();
         }
+
 
         private void SaveUpdateButton_Click(object sender, EventArgs e)
         {
@@ -58,6 +70,81 @@ namespace DnDPlayerTrackerUI
 
             GlobalConfig.Connection.UpdateProfile(p);
             MessageBox.Show("Profile Updated");
+        }
+
+        private void ResetSlotsButton_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("resetting");
+            foreach (GroupBox ctrl in this.Controls.OfType<GroupBox>()) //We get all of groupboxes that is in our form (We want the checkboxes which are only in a groupbox.Not all of the checkboxes in the form.)
+            {
+                foreach (Panel p in ctrl.Controls.OfType<Panel>()) //We get all of checkboxes which are in panel 
+                {
+                    foreach(CheckBox c in p.Controls.OfType<CheckBox>())
+                    {
+                        c.Checked = false;
+                    }
+                }
+            }            
+        }
+
+        public void GroupBox_Leave(object sender, EventArgs e)
+        {
+            TextBox currentTextBox;
+            Label currentLabel = DetermineLabel((GroupBox)sender, out currentTextBox);
+            int textNum = ValidateInt(currentTextBox.Text);
+            if (textNum > 0)
+            {
+                currentLabel.Text = Dictionaries.StatDictionary(textNum);
+            }
+        }
+
+        public Label DetermineLabel(GroupBox currentBox, out TextBox tb)
+        {
+            switch (currentBox.Text)
+            {
+                case "Strength":
+                    tb = StrTextBox;
+                    return StrModLabel;
+                case "Dexterity":
+                    tb = DexTextBox;
+                    return DexModLabel;
+                case "Constitution":
+                    tb = ConTextBox;
+                    return ConModLabel;
+                case "Intelligence":
+                    tb = IntTextBox;
+                    return IntModLabel;
+                case "Wisdom":
+                    tb = WisTextBox;
+                    return WisModLabel;
+                case "Charisma":
+                    tb = ChaTextBox;
+                    return ChaModLabel;
+                default:
+                    break;
+            }
+            tb = null;
+            return null;
+        }
+
+        public int ValidateInt(string text)
+        {
+            int num;
+            if (Int32.TryParse(text, out num))
+            {
+                if (num > 0 && num < 31)
+                    return num;
+                else
+                {
+                    MessageBox.Show("Please enter a number between 1 and 30");
+                    return -1;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Invalid information");
+                return -1;
+            }
         }
     }
 }
