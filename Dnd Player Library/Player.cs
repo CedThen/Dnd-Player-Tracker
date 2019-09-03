@@ -9,7 +9,7 @@ namespace Dnd_Player_Library
         public int PlayerID { get; set; }
         public string PlayerName { get; set; }
         public string PlayerRace { get; set; }
-        public string PlayerClass { get; set; }
+        public string PlayerClass { get; set; }        
         public Stats PlayerStats { get; set; }
         //public List<Equipment> PlayerEquipment { get; set; }
         //public Purse PlayerPurse { get; set; }
@@ -24,6 +24,16 @@ namespace Dnd_Player_Library
             
         }
 
+        public Player(int id, string pName, string pRace, string pClass, Stats pStats)
+        {
+            PlayerID = id;
+            PlayerName = pName;
+            PlayerRace = pRace;
+            PlayerClass = pClass;
+            PlayerStats = pStats;
+
+        }
+
         public Player()
         {
             Stats s = new Stats();
@@ -32,9 +42,10 @@ namespace Dnd_Player_Library
 
         public Player(int playerID, string playerName, string playerRace, string playerClass, int level, int totalHP, int currentHP,
             int proficiencyBonus, string hitDice, int str, int dex,
-            int con, int @int, int wis, int cha, string initative)
+            int con, int @int, int wis, int cha, string initative, int exp, int speed, int ac)
         {
-            Stats s = new Stats(level, totalHP, currentHP, proficiencyBonus, hitDice, str, dex, con, @int, wis, cha, initative);
+            Stats s = new Stats(level, totalHP, currentHP, proficiencyBonus, hitDice, str, 
+                dex, con, @int, wis, cha, initative, exp, speed, ac);
             PlayerID = playerID;
             PlayerName = playerName;
             PlayerRace = playerRace;

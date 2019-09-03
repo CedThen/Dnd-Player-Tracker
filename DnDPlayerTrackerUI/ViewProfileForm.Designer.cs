@@ -79,7 +79,8 @@
             this.CharacterNameTextBox = new System.Windows.Forms.TextBox();
             this.ChaGroupBox = new System.Windows.Forms.GroupBox();
             this.ChaModLabel = new System.Windows.Forms.Label();
-            this.CharTexBox = new System.Windows.Forms.TextBox();
+            this.ChaTextBox = new System.Windows.Forms.TextBox();
+            this.SaveUpdateButton = new System.Windows.Forms.Button();
             this.ProficiencyGroupBox.SuspendLayout();
             this.SavingThrowsGroupBox.SuspendLayout();
             this.WisGroupBox.SuspendLayout();
@@ -121,7 +122,7 @@
             this.ProficiencyTextBox.Name = "ProficiencyTextBox";
             this.ProficiencyTextBox.Size = new System.Drawing.Size(31, 30);
             this.ProficiencyTextBox.TabIndex = 2;
-            this.ProficiencyTextBox.Text = "2";
+            this.ProficiencyTextBox.Text = " ";
             this.ProficiencyTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // HitDiceTextBox
@@ -427,7 +428,7 @@
             this.WisTextBox.Name = "WisTextBox";
             this.WisTextBox.Size = new System.Drawing.Size(65, 24);
             this.WisTextBox.TabIndex = 0;
-            this.WisTextBox.Text = "Wis";
+            this.WisTextBox.Text = " ";
             this.WisTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // IntGroupBox
@@ -461,7 +462,7 @@
             this.IntTextBox.Name = "IntTextBox";
             this.IntTextBox.Size = new System.Drawing.Size(65, 24);
             this.IntTextBox.TabIndex = 0;
-            this.IntTextBox.Text = "Int";
+            this.IntTextBox.Text = " ";
             this.IntTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ConGroupBox
@@ -495,7 +496,7 @@
             this.ConTextBox.Name = "ConTextBox";
             this.ConTextBox.Size = new System.Drawing.Size(65, 24);
             this.ConTextBox.TabIndex = 0;
-            this.ConTextBox.Text = "Con";
+            this.ConTextBox.Text = " ";
             this.ConTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // DexGroupBox
@@ -529,7 +530,7 @@
             this.DexTextBox.Name = "DexTextBox";
             this.DexTextBox.Size = new System.Drawing.Size(65, 24);
             this.DexTextBox.TabIndex = 0;
-            this.DexTextBox.Text = "Dex";
+            this.DexTextBox.Text = " ";
             this.DexTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // StrGroupBox
@@ -564,7 +565,7 @@
             this.StrTextBox.Name = "StrTextBox";
             this.StrTextBox.Size = new System.Drawing.Size(65, 24);
             this.StrTextBox.TabIndex = 0;
-            this.StrTextBox.Text = "Str";
+            this.StrTextBox.Text = " ";
             this.StrTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // CharacterExpTextBox
@@ -593,14 +594,14 @@
             this.CharacterNameTextBox.Name = "CharacterNameTextBox";
             this.CharacterNameTextBox.Size = new System.Drawing.Size(616, 67);
             this.CharacterNameTextBox.TabIndex = 36;
-            this.CharacterNameTextBox.Text = "Character Name";
+            this.CharacterNameTextBox.Text = " ";
             this.CharacterNameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ChaGroupBox
             // 
             this.ChaGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.ChaGroupBox.Controls.Add(this.ChaModLabel);
-            this.ChaGroupBox.Controls.Add(this.CharTexBox);
+            this.ChaGroupBox.Controls.Add(this.ChaTextBox);
             this.ChaGroupBox.Font = new System.Drawing.Font("Immortal", 11.5F);
             this.ChaGroupBox.Location = new System.Drawing.Point(12, 683);
             this.ChaGroupBox.Name = "ChaGroupBox";
@@ -619,16 +620,26 @@
             this.ChaModLabel.TabIndex = 1;
             this.ChaModLabel.Text = "+2";
             // 
-            // CharTexBox
+            // ChaTextBox
             // 
-            this.CharTexBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.CharTexBox.Font = new System.Drawing.Font("Immortal", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CharTexBox.Location = new System.Drawing.Point(23, 76);
-            this.CharTexBox.Name = "CharTexBox";
-            this.CharTexBox.Size = new System.Drawing.Size(65, 24);
-            this.CharTexBox.TabIndex = 0;
-            this.CharTexBox.Text = "Cha";
-            this.CharTexBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ChaTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.ChaTextBox.Font = new System.Drawing.Font("Immortal", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChaTextBox.Location = new System.Drawing.Point(23, 76);
+            this.ChaTextBox.Name = "ChaTextBox";
+            this.ChaTextBox.Size = new System.Drawing.Size(65, 24);
+            this.ChaTextBox.TabIndex = 0;
+            this.ChaTextBox.Text = " ";
+            this.ChaTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // SaveUpdateButton
+            // 
+            this.SaveUpdateButton.Location = new System.Drawing.Point(368, 728);
+            this.SaveUpdateButton.Name = "SaveUpdateButton";
+            this.SaveUpdateButton.Size = new System.Drawing.Size(260, 41);
+            this.SaveUpdateButton.TabIndex = 65;
+            this.SaveUpdateButton.Text = "Save and Update";
+            this.SaveUpdateButton.UseVisualStyleBackColor = true;
+            this.SaveUpdateButton.Click += new System.EventHandler(this.SaveUpdateButton_Click);
             // 
             // ViewProfileForm
             // 
@@ -636,6 +647,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(891, 794);
+            this.Controls.Add(this.SaveUpdateButton);
             this.Controls.Add(this.ChaGroupBox);
             this.Controls.Add(this.ProficiencyGroupBox);
             this.Controls.Add(this.HitDiceTextBox);
@@ -670,6 +682,7 @@
             this.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
             this.Name = "ViewProfileForm";
             this.Text = "View Profile";
+            this.Load += new System.EventHandler(this.ViewProfileForm_Load);
             this.ProficiencyGroupBox.ResumeLayout(false);
             this.ProficiencyGroupBox.PerformLayout();
             this.SavingThrowsGroupBox.ResumeLayout(false);
@@ -743,6 +756,7 @@
         private System.Windows.Forms.TextBox CharacterNameTextBox;
         private System.Windows.Forms.GroupBox ChaGroupBox;
         private System.Windows.Forms.Label ChaModLabel;
-        private System.Windows.Forms.TextBox CharTexBox;
+        private System.Windows.Forms.TextBox ChaTextBox;
+        private System.Windows.Forms.Button SaveUpdateButton;
     }
 }

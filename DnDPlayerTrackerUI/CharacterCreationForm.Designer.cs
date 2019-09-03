@@ -49,7 +49,7 @@
             this.WisTextBox = new System.Windows.Forms.TextBox();
             this.ChaGroupBox = new System.Windows.Forms.GroupBox();
             this.ChaModLabel = new System.Windows.Forms.Label();
-            this.CharTexBox = new System.Windows.Forms.TextBox();
+            this.ChaTextBox = new System.Windows.Forms.TextBox();
             this.CurrentHPTextBox = new System.Windows.Forms.TextBox();
             this.TotalHpTextBox = new System.Windows.Forms.TextBox();
             this.LevelLabel = new System.Windows.Forms.Label();
@@ -66,29 +66,18 @@
             this.SpeedTextBox = new System.Windows.Forms.TextBox();
             this.ArmorClassLabel = new System.Windows.Forms.Label();
             this.ArmorClassTextBox = new System.Windows.Forms.TextBox();
-            this.SavingThrowsGroupBox = new System.Windows.Forms.GroupBox();
-            this.FailuresCheckBox3 = new System.Windows.Forms.CheckBox();
-            this.FailuresCheckBox2 = new System.Windows.Forms.CheckBox();
-            this.FailuresCheckBox1 = new System.Windows.Forms.CheckBox();
-            this.SuccessesCheckBox3 = new System.Windows.Forms.CheckBox();
-            this.SuccessesCheckBox2 = new System.Windows.Forms.CheckBox();
-            this.SuccessesCheckBox1 = new System.Windows.Forms.CheckBox();
-            this.FailuresLabel = new System.Windows.Forms.Label();
-            this.SuccessesLabel = new System.Windows.Forms.Label();
             this.HitDiceTextBox = new System.Windows.Forms.TextBox();
             this.HitDiceLabel = new System.Windows.Forms.Label();
             this.ProficiencyGroupBox = new System.Windows.Forms.GroupBox();
             this.ProficiencyPlusLabel = new System.Windows.Forms.Label();
             this.ProficiencyTextBox = new System.Windows.Forms.TextBox();
             this.CreateProfileButton = new System.Windows.Forms.Button();
-            this.ReturnMenuButton = new System.Windows.Forms.Button();
             this.StrGroupBox.SuspendLayout();
             this.DexGroupBox.SuspendLayout();
             this.ConGroupBox.SuspendLayout();
             this.IntGroupBox.SuspendLayout();
             this.WisGroupBox.SuspendLayout();
             this.ChaGroupBox.SuspendLayout();
-            this.SavingThrowsGroupBox.SuspendLayout();
             this.ProficiencyGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -102,7 +91,7 @@
             this.CharacterNameTextBox.TabIndex = 1;
             this.CharacterNameTextBox.Text = "Character Name";
             this.CharacterNameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.CharacterNameTextBox.Click += new System.EventHandler(this.TextBox_MouseClick);
+            this.CharacterNameTextBox.Click += new System.EventHandler(this.CharacterNameTextBox_MouseClick);
             this.CharacterNameTextBox.Leave += new System.EventHandler(this.TextBox_LeaveFocus);
             // 
             // CharacterLevelTextBox
@@ -162,7 +151,7 @@
             this.StrTextBox.TabIndex = 0;
             this.StrTextBox.Text = "Str";
             this.StrTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.StrTextBox.Click += new System.EventHandler(this.TextBox_MouseClick);
+            this.StrTextBox.Click += new System.EventHandler(this.StrTextBox_MouseClick);
             this.StrTextBox.Leave += new System.EventHandler(this.TextBox_LeaveFocus);
             // 
             // DexGroupBox
@@ -199,7 +188,7 @@
             this.DexTextBox.TabIndex = 0;
             this.DexTextBox.Text = "Dex";
             this.DexTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.DexTextBox.Click += new System.EventHandler(this.TextBox_MouseClick);
+            this.DexTextBox.Click += new System.EventHandler(this.DexTextBox_MouseClick);
             this.DexTextBox.Leave += new System.EventHandler(this.TextBox_LeaveFocus);
             // 
             // ConGroupBox
@@ -236,7 +225,7 @@
             this.ConTextBox.TabIndex = 0;
             this.ConTextBox.Text = "Con";
             this.ConTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ConTextBox.Click += new System.EventHandler(this.TextBox_MouseClick);
+            this.ConTextBox.Click += new System.EventHandler(this.ConTextBox_MouseClick);
             this.ConTextBox.Leave += new System.EventHandler(this.TextBox_LeaveFocus);
             // 
             // IntGroupBox
@@ -273,7 +262,7 @@
             this.IntTextBox.TabIndex = 0;
             this.IntTextBox.Text = "Int";
             this.IntTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.IntTextBox.Click += new System.EventHandler(this.TextBox_MouseClick);
+            this.IntTextBox.Click += new System.EventHandler(this.IntTextBox_MouseClick);
             this.IntTextBox.Leave += new System.EventHandler(this.TextBox_LeaveFocus);
             // 
             // WisGroupBox
@@ -310,14 +299,14 @@
             this.WisTextBox.TabIndex = 0;
             this.WisTextBox.Text = "Wis";
             this.WisTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.WisTextBox.Click += new System.EventHandler(this.TextBox_MouseClick);
+            this.WisTextBox.Click += new System.EventHandler(this.WisTextBox_MouseClick);
             this.WisTextBox.Leave += new System.EventHandler(this.TextBox_LeaveFocus);
             // 
             // ChaGroupBox
             // 
             this.ChaGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.ChaGroupBox.Controls.Add(this.ChaModLabel);
-            this.ChaGroupBox.Controls.Add(this.CharTexBox);
+            this.ChaGroupBox.Controls.Add(this.ChaTextBox);
             this.ChaGroupBox.Font = new System.Drawing.Font("Immortal", 11.5F);
             this.ChaGroupBox.Location = new System.Drawing.Point(12, 683);
             this.ChaGroupBox.Name = "ChaGroupBox";
@@ -337,18 +326,18 @@
             this.ChaModLabel.TabIndex = 1;
             this.ChaModLabel.Text = "+2";
             // 
-            // CharTexBox
+            // ChaTextBox
             // 
-            this.CharTexBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.CharTexBox.Font = new System.Drawing.Font("Immortal", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CharTexBox.Location = new System.Drawing.Point(23, 76);
-            this.CharTexBox.Name = "CharTexBox";
-            this.CharTexBox.Size = new System.Drawing.Size(65, 24);
-            this.CharTexBox.TabIndex = 0;
-            this.CharTexBox.Text = "Cha";
-            this.CharTexBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.CharTexBox.Click += new System.EventHandler(this.TextBox_MouseClick);
-            this.CharTexBox.Leave += new System.EventHandler(this.TextBox_LeaveFocus);
+            this.ChaTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.ChaTextBox.Font = new System.Drawing.Font("Immortal", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChaTextBox.Location = new System.Drawing.Point(23, 76);
+            this.ChaTextBox.Name = "ChaTextBox";
+            this.ChaTextBox.Size = new System.Drawing.Size(65, 24);
+            this.ChaTextBox.TabIndex = 0;
+            this.ChaTextBox.Text = "Cha";
+            this.ChaTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ChaTextBox.Click += new System.EventHandler(this.ChaTextBox_MouseClick);
+            this.ChaTextBox.Leave += new System.EventHandler(this.TextBox_LeaveFocus);
             // 
             // CurrentHPTextBox
             // 
@@ -488,7 +477,7 @@
             this.InitiativeTextBox.TabIndex = 30;
             this.InitiativeTextBox.Text = "+2";
             this.InitiativeTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.InitiativeTextBox.Click += new System.EventHandler(this.TextBox_MouseClick);
+            this.InitiativeTextBox.Click += new System.EventHandler(this.InitiativeTextBox_MouseClick);
             this.InitiativeTextBox.Leave += new System.EventHandler(this.TextBox_LeaveFocus);
             // 
             // SpeedTextBox
@@ -524,98 +513,6 @@
             this.ArmorClassTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.ArmorClassTextBox.Click += new System.EventHandler(this.TextBox_MouseClick);
             this.ArmorClassTextBox.Leave += new System.EventHandler(this.TextBox_LeaveFocus);
-            // 
-            // SavingThrowsGroupBox
-            // 
-            this.SavingThrowsGroupBox.Controls.Add(this.FailuresCheckBox3);
-            this.SavingThrowsGroupBox.Controls.Add(this.FailuresCheckBox2);
-            this.SavingThrowsGroupBox.Controls.Add(this.FailuresCheckBox1);
-            this.SavingThrowsGroupBox.Controls.Add(this.SuccessesCheckBox3);
-            this.SavingThrowsGroupBox.Controls.Add(this.SuccessesCheckBox2);
-            this.SavingThrowsGroupBox.Controls.Add(this.SuccessesCheckBox1);
-            this.SavingThrowsGroupBox.Controls.Add(this.FailuresLabel);
-            this.SavingThrowsGroupBox.Controls.Add(this.SuccessesLabel);
-            this.SavingThrowsGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.SavingThrowsGroupBox.Location = new System.Drawing.Point(131, 206);
-            this.SavingThrowsGroupBox.Name = "SavingThrowsGroupBox";
-            this.SavingThrowsGroupBox.Size = new System.Drawing.Size(255, 95);
-            this.SavingThrowsGroupBox.TabIndex = 33;
-            this.SavingThrowsGroupBox.TabStop = false;
-            this.SavingThrowsGroupBox.Text = "Saving Throws";
-            // 
-            // FailuresCheckBox3
-            // 
-            this.FailuresCheckBox3.AutoSize = true;
-            this.FailuresCheckBox3.Location = new System.Drawing.Point(230, 63);
-            this.FailuresCheckBox3.Name = "FailuresCheckBox3";
-            this.FailuresCheckBox3.Size = new System.Drawing.Size(15, 14);
-            this.FailuresCheckBox3.TabIndex = 41;
-            this.FailuresCheckBox3.UseVisualStyleBackColor = true;
-            // 
-            // FailuresCheckBox2
-            // 
-            this.FailuresCheckBox2.AutoSize = true;
-            this.FailuresCheckBox2.Location = new System.Drawing.Point(180, 63);
-            this.FailuresCheckBox2.Name = "FailuresCheckBox2";
-            this.FailuresCheckBox2.Size = new System.Drawing.Size(15, 14);
-            this.FailuresCheckBox2.TabIndex = 40;
-            this.FailuresCheckBox2.UseVisualStyleBackColor = true;
-            // 
-            // FailuresCheckBox1
-            // 
-            this.FailuresCheckBox1.AutoSize = true;
-            this.FailuresCheckBox1.Location = new System.Drawing.Point(133, 63);
-            this.FailuresCheckBox1.Name = "FailuresCheckBox1";
-            this.FailuresCheckBox1.Size = new System.Drawing.Size(15, 14);
-            this.FailuresCheckBox1.TabIndex = 39;
-            this.FailuresCheckBox1.UseVisualStyleBackColor = true;
-            // 
-            // SuccessesCheckBox3
-            // 
-            this.SuccessesCheckBox3.AutoSize = true;
-            this.SuccessesCheckBox3.Location = new System.Drawing.Point(230, 36);
-            this.SuccessesCheckBox3.Name = "SuccessesCheckBox3";
-            this.SuccessesCheckBox3.Size = new System.Drawing.Size(15, 14);
-            this.SuccessesCheckBox3.TabIndex = 38;
-            this.SuccessesCheckBox3.UseVisualStyleBackColor = true;
-            // 
-            // SuccessesCheckBox2
-            // 
-            this.SuccessesCheckBox2.AutoSize = true;
-            this.SuccessesCheckBox2.Location = new System.Drawing.Point(180, 36);
-            this.SuccessesCheckBox2.Name = "SuccessesCheckBox2";
-            this.SuccessesCheckBox2.Size = new System.Drawing.Size(15, 14);
-            this.SuccessesCheckBox2.TabIndex = 37;
-            this.SuccessesCheckBox2.UseVisualStyleBackColor = true;
-            // 
-            // SuccessesCheckBox1
-            // 
-            this.SuccessesCheckBox1.AutoSize = true;
-            this.SuccessesCheckBox1.Location = new System.Drawing.Point(133, 36);
-            this.SuccessesCheckBox1.Name = "SuccessesCheckBox1";
-            this.SuccessesCheckBox1.Size = new System.Drawing.Size(15, 14);
-            this.SuccessesCheckBox1.TabIndex = 36;
-            this.SuccessesCheckBox1.UseVisualStyleBackColor = true;
-            // 
-            // FailuresLabel
-            // 
-            this.FailuresLabel.AutoSize = true;
-            this.FailuresLabel.ForeColor = System.Drawing.Color.Silver;
-            this.FailuresLabel.Location = new System.Drawing.Point(22, 56);
-            this.FailuresLabel.Name = "FailuresLabel";
-            this.FailuresLabel.Size = new System.Drawing.Size(89, 27);
-            this.FailuresLabel.TabIndex = 35;
-            this.FailuresLabel.Text = "Failures";
-            // 
-            // SuccessesLabel
-            // 
-            this.SuccessesLabel.AutoSize = true;
-            this.SuccessesLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.SuccessesLabel.Location = new System.Drawing.Point(7, 29);
-            this.SuccessesLabel.Name = "SuccessesLabel";
-            this.SuccessesLabel.Size = new System.Drawing.Size(104, 27);
-            this.SuccessesLabel.TabIndex = 34;
-            this.SuccessesLabel.Text = "Successes";
             // 
             // HitDiceTextBox
             // 
@@ -655,10 +552,10 @@
             // ProficiencyPlusLabel
             // 
             this.ProficiencyPlusLabel.AutoSize = true;
-            this.ProficiencyPlusLabel.Font = new System.Drawing.Font("Imprint MT Shadow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProficiencyPlusLabel.Font = new System.Drawing.Font("Immortal", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProficiencyPlusLabel.Location = new System.Drawing.Point(33, 26);
             this.ProficiencyPlusLabel.Name = "ProficiencyPlusLabel";
-            this.ProficiencyPlusLabel.Size = new System.Drawing.Size(24, 25);
+            this.ProficiencyPlusLabel.Size = new System.Drawing.Size(25, 27);
             this.ProficiencyPlusLabel.TabIndex = 3;
             this.ProficiencyPlusLabel.Text = "+";
             // 
@@ -672,12 +569,12 @@
             this.ProficiencyTextBox.TabIndex = 2;
             this.ProficiencyTextBox.Text = "2";
             this.ProficiencyTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ProficiencyTextBox.Click += new System.EventHandler(this.TextBox_MouseClick);
+            this.ProficiencyTextBox.Click += new System.EventHandler(this.ProficiencyTextBox_MouseClick);
             this.ProficiencyTextBox.Leave += new System.EventHandler(this.TextBox_LeaveFocus);
             // 
             // CreateProfileButton
             // 
-            this.CreateProfileButton.Location = new System.Drawing.Point(346, 683);
+            this.CreateProfileButton.Location = new System.Drawing.Point(344, 712);
             this.CreateProfileButton.Name = "CreateProfileButton";
             this.CreateProfileButton.Size = new System.Drawing.Size(260, 41);
             this.CreateProfileButton.TabIndex = 36;
@@ -685,27 +582,16 @@
             this.CreateProfileButton.UseVisualStyleBackColor = true;
             this.CreateProfileButton.Click += new System.EventHandler(this.CreateProfileButton_Click);
             // 
-            // ReturnMenuButton
-            // 
-            this.ReturnMenuButton.Location = new System.Drawing.Point(346, 730);
-            this.ReturnMenuButton.Name = "ReturnMenuButton";
-            this.ReturnMenuButton.Size = new System.Drawing.Size(260, 41);
-            this.ReturnMenuButton.TabIndex = 37;
-            this.ReturnMenuButton.Text = "Return to Main Menu";
-            this.ReturnMenuButton.UseVisualStyleBackColor = true;
-            // 
             // CharacterCreationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(852, 804);
-            this.Controls.Add(this.ReturnMenuButton);
             this.Controls.Add(this.CreateProfileButton);
             this.Controls.Add(this.ProficiencyGroupBox);
             this.Controls.Add(this.HitDiceTextBox);
             this.Controls.Add(this.HitDiceLabel);
-            this.Controls.Add(this.SavingThrowsGroupBox);
             this.Controls.Add(this.ArmorClassTextBox);
             this.Controls.Add(this.ArmorClassLabel);
             this.Controls.Add(this.InitiativeTextBox);
@@ -750,8 +636,6 @@
             this.WisGroupBox.PerformLayout();
             this.ChaGroupBox.ResumeLayout(false);
             this.ChaGroupBox.PerformLayout();
-            this.SavingThrowsGroupBox.ResumeLayout(false);
-            this.SavingThrowsGroupBox.PerformLayout();
             this.ProficiencyGroupBox.ResumeLayout(false);
             this.ProficiencyGroupBox.PerformLayout();
             this.ResumeLayout(false);
@@ -781,7 +665,7 @@
         private System.Windows.Forms.TextBox WisTextBox;
         private System.Windows.Forms.GroupBox ChaGroupBox;
         private System.Windows.Forms.Label ChaModLabel;
-        private System.Windows.Forms.TextBox CharTexBox;
+        private System.Windows.Forms.TextBox ChaTextBox;
         private System.Windows.Forms.TextBox CurrentHPTextBox;
         private System.Windows.Forms.TextBox TotalHpTextBox;
         private System.Windows.Forms.Label LevelLabel;
@@ -798,21 +682,11 @@
         private System.Windows.Forms.TextBox SpeedTextBox;
         private System.Windows.Forms.Label ArmorClassLabel;
         private System.Windows.Forms.TextBox ArmorClassTextBox;
-        private System.Windows.Forms.GroupBox SavingThrowsGroupBox;
-        private System.Windows.Forms.CheckBox FailuresCheckBox3;
-        private System.Windows.Forms.CheckBox FailuresCheckBox2;
-        private System.Windows.Forms.CheckBox FailuresCheckBox1;
-        private System.Windows.Forms.CheckBox SuccessesCheckBox3;
-        private System.Windows.Forms.CheckBox SuccessesCheckBox2;
-        private System.Windows.Forms.CheckBox SuccessesCheckBox1;
-        private System.Windows.Forms.Label FailuresLabel;
-        private System.Windows.Forms.Label SuccessesLabel;
         private System.Windows.Forms.TextBox HitDiceTextBox;
         private System.Windows.Forms.Label HitDiceLabel;
         private System.Windows.Forms.GroupBox ProficiencyGroupBox;
         private System.Windows.Forms.TextBox ProficiencyTextBox;
         private System.Windows.Forms.Button CreateProfileButton;
-        private System.Windows.Forms.Button ReturnMenuButton;
         private System.Windows.Forms.Label ProficiencyPlusLabel;
     }
 }

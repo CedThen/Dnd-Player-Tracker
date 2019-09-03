@@ -8,6 +8,7 @@ namespace Dnd_Player_Library
     {
         Player CreateProfile(Player player);
         List<Player> GetPlayers_All();
-        
+
+        void UpdateProfile(Player player);
     }
 }

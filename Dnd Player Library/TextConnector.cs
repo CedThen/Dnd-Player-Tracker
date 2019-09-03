@@ -37,7 +37,31 @@ namespace Dnd_Player_Library
 
         public List<Player> GetPlayers_All()
         {
-            throw new NotImplementedException();
+            return ProfileFile.FullFilePath().LoadFile().ConvertToPlayerModel();
+            
+        }
+
+        public void UpdateProfile(Player player)
+        {
+            List<Player> players = ProfileFile.FullFilePath().LoadFile().ConvertToPlayerModel();
+            Console.WriteLine($"updated profile's id is {player.PlayerID}");
+            foreach(Player p in players)
+            {
+                Console.WriteLine(p.PlayerName, " ", p.PlayerID);
+                
+                if (p.PlayerID == player.PlayerID)
+                {
+                    p.PlayerName = player.PlayerName;
+                    p.PlayerRace = player.PlayerRace;
+                    p.PlayerClass = player.PlayerClass;
+                    p.PlayerStats = player.PlayerStats;
+                    Console.WriteLine($"Player {p.PlayerName} updated");
+                }
+            }
+
+            players.SaveToPlayerFile(ProfileFile);
+            Console.WriteLine("saved");
         }
     }
 }
+

@@ -13,8 +13,7 @@ namespace DnDPlayerTrackerUI
 {
     public partial class LoadProfileForm : Form
     {
-        private List<Player> availableProfiles = GlobalConfig.Connection.GetPlayers_All();
-        private List<Player> selectedPlayers = new List<Player>();
+        private List<Player> availableProfiles = GlobalConfig.Connection.GetPlayers_All();        
         private Player selectedProfile;
 
         public LoadProfileForm()
@@ -23,16 +22,17 @@ namespace DnDPlayerTrackerUI
             foreach(Player p in availableProfiles)
             {
                 Console.WriteLine(p.PlayerName);
+                Console.WriteLine(p.PlayerID);
             }
         }
 
         private void SelectProfileComboBox_Click(object sender, EventArgs e)
         {
-            SelectProfileComboBox.DisplayMember = "PlayerName";
-            //SelectProfileComboBox.DisplayMember = "PlayerID";
+            SelectProfileComboBox.DisplayMember = "PlayerName";            
             SelectProfileComboBox.DataSource = availableProfiles;
             selectedProfile = (Player)SelectProfileComboBox.SelectedItem;
             Console.WriteLine(selectedProfile.PlayerName);
+            Console.WriteLine(selectedProfile.PlayerStats.Level);
         }
 
         private void LoadProfileButton_Click(object sender, EventArgs e)

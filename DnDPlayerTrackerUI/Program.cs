@@ -18,7 +18,7 @@ namespace DnDPlayerTrackerUI
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Dnd_Player_Library.GlobalConfig.InitializeConnections(Dnd_Player_Library.DatabaseType.Sql);
+            Dnd_Player_Library.GlobalConfig.InitializeConnections(Dnd_Player_Library.DatabaseType.TextFile);
 
             Application.Run(new PlayerTrackerUIForm());
             

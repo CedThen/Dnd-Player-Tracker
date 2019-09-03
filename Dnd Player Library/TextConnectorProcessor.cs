@@ -52,7 +52,10 @@ namespace Dnd_Player_Library.TextHelpers
                 p.PlayerStats.Int= Convert.ToInt32(cols[12]);
                 p.PlayerStats.Wis= Convert.ToInt32(cols[13]);
                 p.PlayerStats.Cha= Convert.ToInt32(cols[14]);
-                p.PlayerStats.Initiative= cols[15];
+                p.PlayerStats.Initiative = cols[15];
+                p.PlayerStats.Experience = Convert.ToInt32(cols[16]);
+                p.PlayerStats.Speed = Convert.ToInt32(cols[17]);
+                p.PlayerStats.ArmorClass= Convert.ToInt32(cols[18]);
 
                 output.Add(p);
             }
@@ -70,7 +73,7 @@ namespace Dnd_Player_Library.TextHelpers
             {
                 PlayerModel.Add($"{p.PlayerID},{p.PlayerName},{p.PlayerRace},{p.PlayerClass},{p.PlayerStats.Level},{p.PlayerStats.TotalHP},{p.PlayerStats.CurrentHP}" +
                     $",{p.PlayerStats.ProficiencyBonus},{p.PlayerStats.HitDice},{p.PlayerStats.Str},{p.PlayerStats.Dex},{p.PlayerStats.Con},{p.PlayerStats.Int}" +
-                    $",{p.PlayerStats.Wis},{p.PlayerStats.Cha},{p.PlayerStats.Initiative}");
+                    $",{p.PlayerStats.Wis},{p.PlayerStats.Cha},{p.PlayerStats.Initiative},{p.PlayerStats.Experience}, {p.PlayerStats.Speed}, {p.PlayerStats.ArmorClass}");
             }
             File.WriteAllLines(fileName.FullFilePath(), PlayerModel);
         }

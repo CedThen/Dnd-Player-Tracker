@@ -22,12 +22,16 @@ namespace Dnd_Player_Library
         public int Wis { get; set; }
         public int Cha { get; set; }
         public string Initiative { get; set; }
+        public int Experience { get; set; }
+        public int Speed { get; set; }
+        public int ArmorClass { get; set; }
+        
         //public int DeathSaveSuccess { get; set; }
         //public int DeathSaveFailure { get; set; }
 
         public Stats(int level, int totalHP, int currentHP, 
             int proficiencyBonus, string hitDice, int str, int dex, 
-            int con, int @int, int wis, int cha, string initative)
+            int con, int @int, int wis, int cha, string initative, int exp, int speed, int ac)
         {
             Level = level;
             TotalHP = totalHP;
@@ -41,6 +45,9 @@ namespace Dnd_Player_Library
             Wis = wis;
             Cha = cha;
             Initiative = initative;
+            Experience = exp;
+            Speed = speed;
+            ArmorClass = ac;
         }
 
         public Stats()
